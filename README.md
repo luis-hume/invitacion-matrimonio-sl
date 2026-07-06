@@ -59,3 +59,8 @@ actualizar_y_subir.bat
 - Incluye sección "Nuestra historia" con fotografías originales.
 - Las imágenes fueron optimizadas para web mediante reducción de tamaño y compresión; no se generaron ni alteraron rostros.
 - RSVP se envía por WhatsApp y no pregunta por acompañante.
+
+## Ajuste v5
+- Portada inicial devuelta al estilo anterior: sin ramos florales grandes, manteniendo solo adornos sutiles.
+- Se mantienen las flores decorativas en las secciones posteriores.
+- En código de vestimenta se eliminó la paleta de colores sugeridos; se conserva la restricción de blanco, marfil, beige, tonos similares y azul navy.
