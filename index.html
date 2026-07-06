@@ -3,64 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Invitación de matrimonio de Sofía y Luis" />
-  <meta name="theme-color" content="#efe4dc" />
-  <meta property="og:title" content="Sofía & Luis · Invitación de matrimonio" />
-  <meta property="og:description" content="Nos casamos. Revisa los detalles y confirma tu asistencia." />
+  <meta name="description" content="Invitación de matrimonio de Sofía & Luis. 10 de octubre de 2026, Til Til." />
+  <meta name="theme-color" content="#031436" />
+  <meta property="og:title" content="Sofía & Luis | 10 de octubre de 2026" />
+  <meta property="og:description" content="Toca para abrir tu invitación." />
   <meta property="og:type" content="website" />
-  <title>Sofía & Luis · Invitación</title>
-
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:locale" content="es_CL" />
+  <title>Sofía & Luis | Invitación</title>
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <header class="site-header" aria-label="Navegación principal">
-    <a class="brand-link" href="#inicio" aria-label="Ir al inicio">
-      <img src="assets/logo-sl.svg" alt="Logo S&L" />
+  <section class="envelope-screen" id="envelopeScreen" aria-label="Abrir invitación">
+    <div class="envelope-card" role="button" tabindex="0" id="openInvitation" aria-label="Toca el sello para abrir tu invitación">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body">
+        <p class="microcopy">Toca el sello para abrir tu invitación</p>
+        <button class="seal" type="button" aria-label="Abrir invitación">
+          <img src="assets/logo-oficial.jpg" alt="Monograma oficial S&L" />
+        </button>
+      </div>
+      <div class="envelope-paper" aria-hidden="true">
+        <img src="assets/ui/monograma-lineal.svg" alt="" />
+        <span>Sofía & Luis</span>
+      </div>
+    </div>
+  </section>
+
+  <header class="topbar" aria-label="Navegación principal">
+    <a class="topbar-logo" href="#inicio" aria-label="Ir al inicio">
+      <img src="assets/logo-oficial.jpg" alt="S&L" />
     </a>
     <nav>
+      <a href="#historia">Historia</a>
       <a href="#detalles">Detalles</a>
-      <a href="#dress-code">Dress code</a>
-      <a href="#confirmar">Confirmar</a>
+      <a href="#confirmar">RSVP</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <img class="floral floral-left" src="assets/floral-left.svg" alt="" aria-hidden="true" />
-      <img class="floral floral-right" src="assets/floral-right.svg" alt="" aria-hidden="true" />
+  <main id="inicio">
+    <section class="hero-section section-panel">
+      <img class="floral-corner floral-a" src="assets/ui/floral-corner.svg" alt="" aria-hidden="true" />
+      <img class="floral-corner floral-b" src="assets/ui/floral-corner.svg" alt="" aria-hidden="true" />
 
-      <div class="hero-card reveal">
-        <p class="kicker">Nos casamos</p>
-        <img class="hero-logo" src="assets/logo-sl.svg" alt="Logo S&L" />
-        <h1><span id="nombreNovia">Sofía</span><span class="ampersand">&</span><span id="nombreNovio">Luis</span></h1>
-        <p class="hero-date" id="fechaPrincipal">10 de octubre de 2026 · 17:00 hrs</p>
-        <p class="hero-copy">Queremos compartir este día con quienes han sido parte de nuestra historia.</p>
+      <div class="hero-inner reveal">
+        <p class="eyebrow">Nos casamos</p>
+        <img class="main-logo" src="assets/logo-oficial.jpg" alt="Monograma oficial S&L" />
+        <h1>Sofía <span>&</span> Luis</h1>
+        <p class="date-line">Sábado 10 de octubre de 2026 · 17:00 h</p>
+        <img class="separator" src="assets/ui/separator.svg" alt="" aria-hidden="true" />
+        <p class="lead">Queremos que seas parte de este día tan especial para nosotros.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#confirmar">Confirmar asistencia</a>
-          <button class="btn btn-ghost" id="calendarButton" type="button">Guardar fecha</button>
+          <a class="button primary" href="#confirmar">Confirmar asistencia</a>
+          <button class="button secondary" id="calendarButton" type="button">Guardar fecha</button>
         </div>
       </div>
-
-      <a class="scroll-hint" href="#detalles" aria-label="Ver detalles de la invitación">Ver detalles</a>
     </section>
 
-    <section class="section intro-section reveal" aria-label="Mensaje inicial">
-      <p class="section-number">01</p>
-      <div>
-        <p class="overline">Con cariño</p>
-        <h2>Una celebración íntima, elegante y pensada para compartir.</h2>
-        <p>Nos gustaría que nos acompañes en una jornada significativa para nosotros. En esta página encontrarás la información principal de la ceremonia, la puntualidad solicitada, el dress code y la confirmación de asistencia.</p>
-      </div>
-    </section>
-
-    <section class="section countdown-section reveal" id="cuenta-regresiva">
-      <p class="overline">Cuenta regresiva</p>
+    <section class="section-panel countdown-panel reveal" id="cuenta-regresiva">
+      <p class="eyebrow">Cuenta regresiva</p>
+      <h2>Falta cada vez menos</h2>
       <div class="countdown" aria-live="polite">
         <article><strong id="days">00</strong><span>Días</span></article>
         <article><strong id="hours">00</strong><span>Horas</span></article>
@@ -69,68 +77,197 @@
       </div>
     </section>
 
-    <section class="section details-section" id="detalles">
+    <section class="section-panel intro-panel reveal">
+      <div class="split-text">
+        <p class="section-number">01</p>
+        <div>
+          <p class="eyebrow">Con cariño</p>
+          <h2>Esta invitación fue preparada especialmente para ti.</h2>
+          <p>Nos haría muy felices compartir este momento contigo. Hemos cuidado cada detalle para vivir una celebración íntima, significativa y ordenada.</p>
+          <p class="note-box">Esta invitación es personal e intransferible. Agradecemos respetar el número de invitados indicado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel story-panel" id="historia">
       <div class="section-heading reveal">
-        <p class="overline">Información</p>
+        <p class="eyebrow">Nuestra historia</p>
+        <h2>Un camino hecho de viajes, familia, risas y pequeños rituales.</h2>
+        <p>Lo nuestro se ha construido en días simples y momentos que se volvieron importantes: paseos con Violeta, celebraciones, estadios, viajes y conversaciones que terminaron en planes para toda la vida.</p>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card tall reveal">
+          <img src="assets/photos/foto-01.jpg" alt="Sofía y Luis mostrando el anillo de compromiso" loading="lazy" />
+          <div>
+            <span>El sí</span>
+            <h3>El comienzo de una nueva etapa</h3>
+            <p>Una promesa sencilla, clara y profundamente nuestra.</p>
+          </div>
+        </article>
+        <article class="story-card reveal">
+          <img src="assets/photos/foto-02.jpg" alt="Sofía y Luis en un viaje juntos" loading="lazy" />
+          <div>
+            <span>Viajes</span>
+            <h3>Los lugares que se vuelven memoria</h3>
+            <p>Aprendimos a mirar el mundo como equipo.</p>
+          </div>
+        </article>
+        <article class="story-card reveal">
+          <img src="assets/photos/foto-05.jpg" alt="Sofía, Luis y Violeta en el parque" loading="lazy" />
+          <div>
+            <span>Violeta</span>
+            <h3>La familia que también celebra</h3>
+            <p>Hay amores que llegan con cuatro patas y se quedan para siempre.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-panel gallery-panel reveal" aria-label="Galería de fotografías">
+      <p class="eyebrow">Momentos</p>
+      <h2>Algunos recuerdos antes del gran día</h2>
+      <div class="photo-mosaic">
+        <img src="assets/photos/foto-06.jpg" alt="Sofía, Luis y Violeta celebrando" loading="lazy" />
+        <img src="assets/photos/foto-03.jpg" alt="Sofía y Luis en un atardecer" loading="lazy" />
+        <img src="assets/photos/foto-04.jpg" alt="Sofía y Luis en la Laguna Cejar" loading="lazy" />
+        <img src="assets/photos/foto-07.jpg" alt="Sofía y Luis en el estadio" loading="lazy" />
+        <img src="assets/photos/foto-08.jpg" alt="Sofía y Luis sonriendo juntos" loading="lazy" />
+        <img src="assets/photos/foto-09.jpg" alt="Sofía y Luis en una celebración" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="section-panel details-panel" id="detalles">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Información</p>
         <h2>Detalles del matrimonio</h2>
       </div>
 
       <div class="detail-grid">
         <article class="detail-card reveal">
-          <span class="detail-icon">✦</span>
-          <p class="overline">Ceremonia</p>
-          <h3 id="ceremoniaNombre">Iglesia de Cerro Blanco</h3>
-          <p id="ceremoniaDireccion">Tiltil, Región Metropolitana</p>
-          <p class="detail-note">Se solicita llegar al menos 30 minutos antes para iniciar puntualmente.</p>
-          <a class="text-link" id="mapsCeremonia" href="#" target="_blank" rel="noopener">Abrir ubicación</a>
+          <p class="eyebrow">Ceremonia religiosa</p>
+          <h3>Iglesia de Cerro Blanco, Til Til</h3>
+          <p>Panamericana Norte S/N, kilómetro 38, Til Til.</p>
+          <p class="detail-note">Se exige puntualidad: llegar al menos 30 minutos antes.</p>
+          <a class="text-link" id="mapsCeremonia" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a>
         </article>
 
         <article class="detail-card reveal">
-          <span class="detail-icon">✦</span>
-          <p class="overline">Celebración</p>
-          <h3 id="celebracionNombre">Lugar por confirmar</h3>
-          <p id="celebracionDireccion">Pronto compartiremos más detalles.</p>
-          <p class="detail-note">Cuando definas el lugar, solo debes actualizarlo en el bloque de configuración de <code>script.js</code>.</p>
-        </article>
-
-        <article class="detail-card reveal">
-          <span class="detail-icon">✦</span>
-          <p class="overline">Horario</p>
-          <h3 id="horarioTitulo">17:00 hrs</h3>
-          <p>La ceremonia comenzará puntualmente.</p>
-          <p class="detail-note">Recomendamos considerar el traslado con anticipación.</p>
+          <p class="eyebrow">Fiesta</p>
+          <h3>Centro de Eventos</h3>
+          <p>Andrés Bello 398, Til Til.</p>
+          <p class="detail-note">Después de la ceremonia, continuaremos celebrando juntos.</p>
+          <a class="text-link" id="mapsFiesta" href="#" target="_blank" rel="noopener">Cómo llegar</a>
         </article>
       </div>
     </section>
 
-    <section class="section rules-section reveal" id="dress-code">
-      <div class="ornament-line" aria-hidden="true"></div>
-      <p class="overline">Dress code</p>
-      <h2>Vestimenta formal</h2>
-      <div class="rules-grid">
+    <section class="section-panel dress-panel reveal" id="dress-code">
+      <img class="separator" src="assets/ui/separator.svg" alt="" aria-hidden="true" />
+      <p class="eyebrow">Código de vestimenta</p>
+      <h2>Formal y elegante</h2>
+      <p>Agradecemos evitar vestidos o trajes de color blanco, marfil, beige o tonos similares. Azul navy tampoco está permitido, ya que forma parte de la línea visual reservada para los novios.</p>
+      <div class="palette" aria-label="Paleta sugerida de colores">
+        <span style="--swatch:#6C2F3A"><b>Borgoña</b></span>
+        <span style="--swatch:#9BAE9A"><b>Verde salvia</b></span>
+        <span style="--swatch:#A9C1D8"><b>Azul empolvado</b></span>
+        <span style="--swatch:#C9B895"><b>Champagne</b></span>
+        <span style="--swatch:#697784"><b>Gris suave</b></span>
+      </div>
+      <p class="note-box">La indicación busca mantener armonía visual en fotografías y reservar los tonos principales de la invitación.</p>
+    </section>
+
+    <section class="section-panel utility-panel reveal">
+      <div class="utility-grid">
         <article>
-          <h3>Colores reservados</h3>
-          <p>Agradecemos evitar vestidos o trajes en blanco, beige, tonos similares y azul navy. Esos colores quedan reservados para la novia y la línea visual del matrimonio.</p>
+          <p class="eyebrow">Regalos</p>
+          <h3>Un detalle para esta nueva etapa</h3>
+          <p>El mejor regalo será compartir este día contigo. Si deseas acompañarnos con un obsequio, puedes hacerlo mediante transferencia.</p>
+          <button class="button secondary" id="showBankButton" type="button">Ver datos de transferencia</button>
+          <div class="bank-box" id="bankBox" hidden>
+            <p><strong>Titular:</strong> <span id="bankHolder">Por definir</span></p>
+            <p><strong>RUT:</strong> <span id="bankRut">Por definir</span></p>
+            <p><strong>Banco:</strong> <span id="bankName">Por definir</span></p>
+            <p><strong>Cuenta:</strong> <span id="bankAccount">Por definir</span></p>
+            <p><strong>Correo:</strong> <span id="bankEmail">Por definir</span></p>
+            <button class="copy-button" id="copyBankButton" type="button">Copiar datos</button>
+          </div>
         </article>
+
         <article>
-          <h3>Invitación personal</h3>
-          <p>Esta invitación es válida únicamente para la persona invitada. Gracias por ayudarnos a cuidar una celebración íntima y organizada.</p>
+          <p class="eyebrow">Álbum colaborativo</p>
+          <h3>Nuestro matrimonio a través de tus ojos</h3>
+          <p>Después de la celebración podrás subir fotografías y videos al álbum compartido.</p>
+          <a class="button secondary" id="photosButton" href="#" target="_blank" rel="noopener">Subir fotografías</a>
+        </article>
+
+        <article>
+          <p class="eyebrow">Playlist</p>
+          <h3>La pista de baile también la construimos contigo</h3>
+          <p>Agrega una canción que quieras bailar con nosotros.</p>
+          <a class="button secondary" id="spotifyButton" href="#" target="_blank" rel="noopener">Agregar canción</a>
         </article>
       </div>
     </section>
 
-    <section class="section rsvp-section reveal" id="confirmar">
-      <img class="small-ornament" src="assets/separator.svg" alt="" aria-hidden="true" />
-      <p class="overline">RSVP</p>
-      <h2>Confirma tu asistencia</h2>
-      <p>Para ayudarnos con la organización, confirma tu asistencia mediante WhatsApp.</p>
-      <a class="btn btn-primary" id="whatsappButton" href="#" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+    <section class="section-panel rsvp-panel reveal" id="confirmar">
+      <p class="eyebrow">Confirmación de asistencia</p>
+      <h2>Confírmanos tu asistencia</h2>
+      <p>Para ayudarnos con la organización, responde estos datos. La confirmación se enviará por WhatsApp.</p>
+
+      <form class="rsvp-form" id="rsvpForm">
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" placeholder="Escribe tu nombre" required />
+        </label>
+        <label>
+          Asistencia
+          <select name="asistencia" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Asistiré">Asistiré</option>
+            <option value="No podré asistir">No podré asistir</option>
+          </select>
+        </label>
+        <label>
+          Restricción alimentaria
+          <input type="text" name="alimentacion" placeholder="Ej: vegetariano/a, celiaquía, ninguna" />
+        </label>
+        <label>
+          Mensaje opcional
+          <textarea name="mensaje" rows="3" placeholder="Puedes dejarnos un mensaje breve"></textarea>
+        </label>
+        <p class="form-note">La invitación es válida únicamente para el invitado nombrado; no incluye acompañante.</p>
+        <button class="button primary" type="submit">Enviar confirmación por WhatsApp</button>
+      </form>
+    </section>
+
+    <section class="section-panel faq-panel reveal">
+      <p class="eyebrow">Información importante</p>
+      <details open>
+        <summary>¿A qué hora debo llegar?</summary>
+        <p>La ceremonia comienza a las 17:00 h. Solicitamos llegar al menos 30 minutos antes.</p>
+      </details>
+      <details>
+        <summary>¿La invitación incluye acompañante?</summary>
+        <p>No. La invitación es exclusiva y válida únicamente para la persona invitada.</p>
+      </details>
+      <details>
+        <summary>¿Qué colores debo evitar?</summary>
+        <p>Blanco, marfil, beige, tonos similares y azul navy.</p>
+      </details>
+    </section>
+
+    <section class="closing section-panel reveal">
+      <img class="main-logo small" src="assets/logo-oficial.jpg" alt="Monograma oficial S&L" />
+      <h2>Gracias por acompañarnos en uno de los días más importantes de nuestras vidas.</h2>
+      <p>Con cariño,</p>
+      <strong>Sofía & Luis</strong>
     </section>
   </main>
 
-  <footer>
-    <img src="assets/separator.svg" alt="" aria-hidden="true" />
-    <p>S&L · 10 de octubre de 2026</p>
+  <footer class="footer">
+    <img src="assets/ui/separator.svg" alt="" aria-hidden="true" />
+    <p>S&L · 10 de octubre de 2026 · Til Til</p>
   </footer>
 
   <script src="script.js"></script>

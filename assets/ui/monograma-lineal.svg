@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="220" viewBox="0 0 340 220" fill="none">
+  <text x="62" y="152" font-family="Cormorant Garamond, Georgia, serif" font-size="148" font-style="italic" fill="#1E3A5F">S</text>
+  <text x="159" y="157" font-family="Cormorant Garamond, Georgia, serif" font-size="150" font-style="italic" fill="#1E3A5F">L</text>
+  <path d="M144 124C178 89 224 83 251 106" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <path d="M213 154C238 151 256 140 269 121" stroke="#1E3A5F" stroke-width="2.5" stroke-linecap="round" opacity=".72"/>
+  <path d="M265 123C273 122 278 117 282 110M265 123C271 128 278 130 286 129" stroke="#1E3A5F" stroke-width="1.8" stroke-linecap="round" opacity=".65"/>
+  <path d="M250 139C258 140 265 137 271 132M250 139C254 146 261 150 269 151" stroke="#1E3A5F" stroke-width="1.8" stroke-linecap="round" opacity=".65"/>
+</svg>

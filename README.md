@@ -1,21 +1,61 @@
-# Invitación web S&L
+# Invitación digital Sofía & Luis - versión con fotos e historia
 
-Sitio estático preparado para GitHub Pages. No requiere dependencias ni proceso de build.
+Esta versión está preparada para reemplazar el sitio publicado en GitHub Pages.
 
-## Archivos principales
+## Archivos que se deben reemplazar
 
-- `index.html`: estructura y textos de las secciones.
-- `style.css`: estética completa: colores, tipografías, layout, responsive y animaciones.
-- `script.js`: datos editables de la invitación, cuenta regresiva, botón de WhatsApp y archivo de calendario.
-- `assets/`: logo, flores, separador y textura.
+Copia todo el contenido de esta carpeta dentro de la carpeta local del repositorio:
 
-## Publicación
+```text
+index.html
+style.css
+script.js
+assets/
+README.md
+actualizar_y_subir.bat
+```
 
-Este repositorio debe quedar configurado en GitHub como:
+No es necesario volver a configurar GitHub Pages. El repositorio debe seguir publicado como:
 
-- Settings → Pages
-- Source: Deploy from a branch
-- Branch: main
-- Folder: / root
+```text
+Deploy from a branch → main → / root
+```
 
-No se usa GitHub Actions para publicar.
+## Datos editables
+
+Los datos principales están en `script.js`, dentro del bloque `WEDDING`.
+
+Debes revisar especialmente:
+
+```js
+contact.whatsappNumber
+links.googlePhotos
+links.spotify
+bank
+```
+
+Los datos de banco, Google Photos y Spotify quedaron con placeholders para que no se publique información incompleta.
+
+## Subir cambios a GitHub
+
+Después de reemplazar los archivos, abre una terminal dentro de la carpeta del repositorio y ejecuta:
+
+```bat
+git add -A
+git commit -m "Actualizar invitación con fotos e historia"
+git push
+```
+
+También puedes ejecutar:
+
+```bat
+actualizar_y_subir.bat
+```
+
+## Notas de diseño
+
+- Paleta dominante: navy, azul medianoche, azul empolvado, marfil y blanco papel.
+- Incluye apertura tipo sobre con sello S&L.
+- Incluye sección "Nuestra historia" con fotografías originales.
+- Las imágenes fueron optimizadas para web mediante reducción de tamaño y compresión; no se generaron ni alteraron rostros.
+- RSVP se envía por WhatsApp y no pregunta por acompañante.

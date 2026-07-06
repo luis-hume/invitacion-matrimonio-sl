@@ -1,14 +1,10 @@
 @echo off
-REM Ejecutar este archivo desde la carpeta del repositorio local.
-REM Elimina el workflow antiguo si existe, agrega los cambios y sube a GitHub.
-
-IF EXIST ".github\workflows\pages.yml" (
-  del ".github\workflows\pages.yml"
-)
-
-git status
+chcp 65001 >nul
+echo Actualizando invitación en GitHub...
 git add -A
-git commit -m "Redisenar invitacion web"
+git commit -m "Actualizar invitacion con fotos e historia"
 git push
-
+echo.
+echo Listo. Espera 1 a 3 minutos y revisa:
+echo https://luis-hume.github.io/invitacion-matrimonio-sl/
 pause
